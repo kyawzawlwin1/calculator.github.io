@@ -178,3 +178,23 @@
 
 // const paragraphs = document.getElementsByTagName("p")
 const points = [34, 15, 25, 52, 19, 56 ,30, 57];
+
+const heading = document.querySelector("#heading")
+const btn = document.querySelector("#btn")
+const headingSmallar = document.querySelector("#headingSmaller")
+const headingLarger = document.querySelector("#headingLarger")
+
+btn.onclick = () => {
+    heading.style.color = "green";
+    heading.style.backgroundColor = "gray";
+};
+
+headingSmallar.onclick = () => {
+    const current = parseInt(heading.style.fontSize);
+    heading.style.fontSize = `${current - 5}px`;
+};
+
+headingLarger.onclick = () => {
+    const current = parseInt(heading.style.fontSize);
+    heading.style.fontSize = `${current + 5}px`;
+};
